@@ -1,0 +1,22 @@
+﻿<Window x:Class="project1_andromeda_0._0._2.Window_conflitto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project1_andromeda_0._0._2"
+        mc:Ignorable="d"
+        Title="Window_conflitto" Height="461.667" Width="788.925">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="17,20,0,0" TextWrapping="Wrap" Text="Informazioni conflitto:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="17,64,0,0" TextWrapping="Wrap" Text="Progetto selezionato:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlock_npCollidenti" HorizontalAlignment="Left" Margin="317,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Progetti collidenti"/><Run Text=":"/></TextBlock>
+        <ScrollViewer HorizontalAlignment="Left" Height="248" Margin="317,85,0,0" VerticalAlignment="Top" Width="425" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+            <Grid x:Name="Grid_progettiCollidenti"/>
+        </ScrollViewer>
+        <Button x:Name="Button_conferma" Content="Conferma modifiche" HorizontalAlignment="Left" Margin="617,379,0,0" VerticalAlignment="Top" Width="135" Background="#FFEEEEEE" BorderBrush="#FFD8D8D8" Height="27" Click="Button_conferma_Click"/>
+        <Button x:Name="Button_soluzione" Content="Visualizza proposta di soluzione" HorizontalAlignment="Left" Margin="17,379,0,0" VerticalAlignment="Top" Width="197" Background="#FFEEEEEE" BorderBrush="#FFD8D8D8" Height="27" Click="Button_soluzione_Click"/>
+        <Button x:Name="Button_annulla" Content="Annulla modifiche" HorizontalAlignment="Left" Margin="477,379,0,0" VerticalAlignment="Top" Width="135" Background="#FFEEEEEE" BorderBrush="#FFD8D8D8" Height="27" Click="Button_annulla_Click"/>
+        <Grid x:Name="Grid_progettoSelezionato" HorizontalAlignment="Left" Height="248" Margin="17,85,0,0" VerticalAlignment="Top" Width="253"/>
+
+    </Grid>
+</Window>

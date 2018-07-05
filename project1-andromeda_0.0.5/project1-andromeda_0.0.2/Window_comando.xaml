@@ -1,0 +1,17 @@
+﻿<Window x:Class="project1_andromeda_0._0._2.Window_comando"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project1_andromeda_0._0._2"
+        mc:Ignorable="d"
+        Title="Window_comando" Height="57.358" Width="239.931" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="White">
+    <Grid>
+        <TextBlock x:Name="TextBlock_tastoDestro" HorizontalAlignment="Left" Margin="131,41,0,0" TextWrapping="Wrap" Text="Mouse destro annullare" VerticalAlignment="Top" Foreground="#CC000000" FontSize="10"/>
+        <TextBlock x:Name="TextBlock_testo" HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="Comando:" VerticalAlignment="Top" Width="212" Height="23"/>
+        <TextBlock x:Name="TextBlock_invio" HorizontalAlignment="Left" Margin="4,41,0,0" TextWrapping="Wrap" Text="Invio conferma" VerticalAlignment="Top" Foreground="#CC000000" FontSize="10"/>
+        <Border BorderBrush="#FF818181" BorderThickness="1" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="240"/>
+        <Separator HorizontalAlignment="Left" Height="8" Margin="4,33,0,0" VerticalAlignment="Top" Width="231" RenderTransformOrigin="0.5,0.5" Background="#FFD4D4D4"/>
+
+    </Grid>
+</Window>

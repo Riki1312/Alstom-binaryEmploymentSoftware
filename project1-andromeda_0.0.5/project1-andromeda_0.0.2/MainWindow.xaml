@@ -1,0 +1,80 @@
+﻿<Window x:Class="project1_andromeda_0._0._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project1_andromeda_0._0._2"
+        mc:Ignorable="d"
+        Title="Gestione Occupazione Binari - Alsom" Height="696" Width="1272.666" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid x:Name="Grid_main">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Binari" HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="1235" Margin="10,10,0,0" Panel.ZIndex="350">
+            <Button x:Name="AddBinario" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="1060,10,0,0" Background="White" BorderBrush="#FFA2A2A2" Height="22" Padding="1,0,1,1" Click="AddBinario_Click">
+                <Grid Height="22" Width="142">
+                    <Image HorizontalAlignment="Left" Height="16" Margin="15,2,0,0" VerticalAlignment="Top" Width="35" Source="Imgs/button (1).png"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Aggiungi Binario" VerticalAlignment="Top" Margin="39,2,0,0"/>
+                </Grid>
+            </Button>
+        </GroupBox>
+        <GroupBox Header="Export" HorizontalAlignment="Left" Margin="1076,86,0,449" Width="168">
+            <Grid HorizontalAlignment="Left" Height="102" Margin="0,10,0,-4" VerticalAlignment="Top" Width="156">
+                <Button x:Name="Button_exportExcel" Content="Excel" HorizontalAlignment="Left" Margin="51,34,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7F7F7" BorderBrush="#FFD8D8D8" Click="Button_exportExcel_Click"/>
+                <Button x:Name="Button_exportCSV" Content="CSV" HorizontalAlignment="Left" Margin="51,59,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7F7F7" BorderBrush="#FFD8D8D8" Click="Button_exportCSV_Click"/>
+                <CheckBox x:Name="CheckBox_ExportAll" Content="Inculidi tutto" HorizontalAlignment="Left" Margin="30,14,0,0" VerticalAlignment="Top"/>
+                <Image HorizontalAlignment="Left" Height="37" Margin="14,42,0,0" VerticalAlignment="Top" Width="29" Source="Imgs/export.png"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Opzioni" HorizontalAlignment="Left" Margin="1076,330,0,38" Width="168">
+            <Grid HorizontalAlignment="Left" Height="267" Margin="0,10,0,-2" VerticalAlignment="Top" Width="156">
+                <Button x:Name="Button_debug" HorizontalAlignment="Left" Margin="32,224,0,0" VerticalAlignment="Top" Width="96" Background="White" BorderBrush="White" Click="Button_debug_Click">
+                    <Image Height="21" Width="50" Source="Imgs/layers.png"/>
+                </Button>
+                <Button x:Name="Button_COM_spostaDopo" HorizontalAlignment="Left" Margin="32,21,0,0" VerticalAlignment="Top" Width="49" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Sposta dopo" Click="Button_COM_spostaDopo_Click">
+                    <Image Height="20" Width="29" Source="Imgs/move (1).png"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="80,21,0,0" VerticalAlignment="Top" Width="48" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Sposta prima">
+                    <Image Height="20" Width="32" Source="Imgs/move.png"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="32,68,0,0" VerticalAlignment="Top" Width="49" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Anticipa">
+                    <Image Height="20" Width="32" Source="Imgs/rewind-time.png"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="80,68,0,0" VerticalAlignment="Top" Width="48" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Posticipa">
+                    <Image Height="20" Width="32" Source="Imgs/time-passing.png"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="32,115,0,0" VerticalAlignment="Top" Width="49" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Inverti progetti">
+                    <Image Height="19" Width="34" Source="Imgs/vertical.png"/>
+                </Button>
+                <Button x:Name="Button_COM_elimina" HorizontalAlignment="Left" Margin="80,115,0,0" VerticalAlignment="Top" Width="48" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Elimina selezionati" Click="Button_COM_elimina_Click">
+                    <Image Height="19" Width="32" Source="Imgs/delete (1).png"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="32,162,0,0" VerticalAlignment="Top" Width="49" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Trova buchi">
+                    <Image Height="19" Width="33" Source="Imgs/antivirus.png"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="80,162,0,0" VerticalAlignment="Top" Width="48" Background="White" BorderBrush="#FFD8D8D8" Height="32" FontSize="8" ToolTip="Risolvi tutti conflitti">
+                    <Image Height="19" Width="32" Source="Imgs/list.png"/>
+                </Button>
+            </Grid>
+        </GroupBox>
+        <ScrollViewer x:Name="ScrollOrizzontale" Width="1039" HorizontalAlignment="Left" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Margin="10,0,0,38">
+            <Grid x:Name="Grid_scrollOrizzontale"/>
+        </ScrollViewer>
+        <GroupBox Header="Import" HorizontalAlignment="Left" Margin="1076,221,0,335" Width="168">
+            <Grid HorizontalAlignment="Left" Height="80" Margin="0,10,0,-3" VerticalAlignment="Top" Width="156">
+                <Button x:Name="Button_importExcel" Content="Excel" HorizontalAlignment="Left" Margin="51,12,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7F7F7" BorderBrush="#FFD8D8D8" Click="Button_importExcel_Click"/>
+                <Button Content="CSV" HorizontalAlignment="Left" Margin="51,37,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7F7F7" BorderBrush="#FFD8D8D8" Click="Button_Click_1"/>
+                <Image HorizontalAlignment="Left" Height="37" Margin="16,20,0,0" VerticalAlignment="Top" Width="28" Source="Imgs/import.png"/>
+            </Grid>
+        </GroupBox>
+        <ToolBar Height="27" Margin="0" VerticalAlignment="Bottom" Background="White" Foreground="Black" BorderBrush="Black">
+            <Button x:Name="Button_visStandard" Content="  Visualizzazione sandard" Click="Button_visStandard_Click"/>
+            <Button x:Name="Button_visBinari" Content="Visualizazione binari" Foreground="#CC000000" Click="Button_visBinari_Click"/>
+            <Separator/>
+            <Button x:Name="Button_impostazioni" Content="Impostazioni" Click="Button_impostazioni_Click"/>
+            <Separator/>
+            <Button x:Name="Button_info" Content="Info" Click="Button_info_Click"/>
+        </ToolBar>
+
+    </Grid>
+</Window>
